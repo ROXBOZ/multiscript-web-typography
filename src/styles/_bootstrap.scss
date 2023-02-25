@@ -1,0 +1,26 @@
+.form-check-input {
+  margin-right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: top;
+  background-position: center;
+  appearance: none;
+  border-radius: 0.25em;
+  &:active {
+    filter: brightness(90%);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.form-check-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+.form-check-input:checked[type="radio"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}

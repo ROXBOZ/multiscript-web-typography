@@ -1,0 +1,20 @@
+/*------------Colors------------*/
+$background-color: #171725;
+$highlight: lighten($background-color, 10%);
+$text-color: white;
+$txt-dark: #171725;
+
+/*------------Weights------------*/
+$regular-weight: 400;
+$strong-weight: 700;
+
+/*------------Gaps, Padding, Margin------------*/
+$demi-gap: 1em;
+$gap: 2em;
+
+/*------------Borders------------*/
+$border-solid: 1px solid;
+$border-radius: 0.2em;
+
+/*------------Animations------------*/
+$animation-transition: 2s;

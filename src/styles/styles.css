@@ -1,0 +1,439 @@
+/*------------Colors------------*/
+/*------------Weights------------*/
+/*------------Gaps, Padding, Margin------------*/
+/*------------Borders------------*/
+/*------------Animations------------*/
+/* Open a new tab Links */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/noto-sans-v27-latin-regular.eot");
+  src: local(""), url("../assets/fonts/noto-sans-v27-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/noto-sans-v27-latin-regular.woff2") format("woff2"), url("../assets/fonts/noto-sans-v27-latin-regular.woff") format("woff"), url("../assets/fonts/noto-sans-v27-latin-regular.ttf") format("truetype"), url("../assets/fonts/noto-sans-v27-latin-regular.svg#NotoSans") format("svg");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/noto-sans-v27-latin-700.eot");
+  src: local(""), url("../assets/fonts/noto-sans-v27-latin-700.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/noto-sans-v27-latin-700.woff2") format("woff2"), url("../assets/fonts/noto-sans-v27-latin-700.woff") format("woff"), url("../assets/fonts/noto-sans-v27-latin-700.ttf") format("truetype"), url("../assets/fonts/noto-sans-v27-latin-700.svg#NotoSans") format("svg");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.eot");
+  src: local(""), url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.woff2") format("woff2"), url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.woff") format("woff"), url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.ttf") format("truetype"), url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.svg#NotoSansArabic") format("svg");
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/noto-sans-arabic-v18-arabic-700.eot");
+  src: local(""), url("../assets/fonts/noto-sans-arabic-v18-arabic-700.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/noto-sans-arabic-v18-arabic-700.woff2") format("woff2"), url("../assets/fonts/noto-sans-arabic-v18-arabic-700.woff") format("woff"), url("../assets/fonts/noto-sans-arabic-v18-arabic-700.ttf") format("truetype"), url("../assets/fonts/noto-sans-arabic-v18-arabic-700.svg#NotoSansArabic") format("svg");
+}
+p {
+  margin-bottom: 1em;
+  letter-spacing: 0.5px;
+}
+p.pretitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+p.pretitle + h2, p.pretitle + h3 {
+  margin-top: 0;
+}
+p a {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  font-weight: 700;
+}
+p a:hover {
+  border-bottom: none;
+  transition: ease-in 0.3s;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  gap: 2em;
+}
+ul .radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Ratio Scale */
+h4,
+.h4 {
+  font-size: 1.333rem;
+  margin-bottom: 0.65em;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: clamp(
+        1rem,
+        4.333vw + 1rem,
+        1.333rem
+      );
+}
+
+h3,
+.h3 {
+  font-size: 1.776889rem;
+  margin-bottom: 0.65em;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: clamp(
+        1.19051563rem,
+        4.58637337vw + 1rem,
+        1.776889rem
+      );
+}
+
+h2,
+.h2 {
+  font-size: 2.368593037rem;
+  margin-bottom: 0.65em;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: clamp(
+        1.5869573348rem,
+        4.7816357022vw + 1rem,
+        2.368593037rem
+      );
+}
+
+h1,
+.h1 {
+  font-size: 3.1573345183rem;
+  margin-bottom: 0.65em;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: clamp(
+        2.1154141273rem,
+        5.041920391vw + 1rem,
+        3.1573345183rem
+      );
+}
+
+header {
+  margin: auto;
+  padding: 2em 0;
+  margin: 0;
+}
+
+footer {
+  margin: auto;
+  padding: 2em 0;
+  margin: 0;
+}
+
+.latin .pretitle,
+.latin a,
+.latin pre {
+  color: magenta;
+}
+.latin .skip-to-content-link {
+  background-color: magenta;
+}
+.latin .tip-bloc {
+  background-color: rgba(255, 0, 255, 0.1);
+}
+.latin .tabbed-navigation {
+  background-color: rgba(255, 0, 255, 0.1);
+}
+.latin .tabbed-navigation a:hover {
+  color: #171725;
+  background-color: #ff80ff;
+}
+.latin .tabbed-navigation a.active {
+  color: #171725;
+  background-color: #ff66ff;
+}
+.latin .tabbed-navigation a.active:hover {
+  background-color: #ff4dff;
+}
+.latin input {
+  accent-color: magenta;
+}
+.latin .button:hover,
+.latin .button-look:hover {
+  color: black !important;
+  background-color: magenta;
+}
+.latin .form-check-input {
+  border: solid 2px #ff66ff;
+}
+.latin .form-check-input:checked {
+  background-color: magenta;
+}
+.latin .form-check-input[type=radio] {
+  background-color: #660066;
+}
+
+.arabic .pretitle,
+.arabic a,
+.arabic pre {
+  color: cyan;
+}
+.arabic .skip-to-content-link {
+  background-color: cyan;
+}
+.arabic .tip-bloc {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+.arabic .tabbed-navigation {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+.arabic .tabbed-navigation a:hover {
+  color: #171725;
+  background-color: #80ffff;
+}
+.arabic .tabbed-navigation a.active {
+  color: #171725;
+  background-color: #66ffff;
+}
+.arabic .tabbed-navigation a.active:hover {
+  background-color: #4dffff;
+}
+.arabic input {
+  accent-color: cyan;
+}
+.arabic .button:hover,
+.arabic .button-look:hover {
+  color: black !important;
+  background-color: cyan;
+}
+.arabic .form-check-input {
+  border: solid 2px #66ffff;
+}
+.arabic .form-check-input:checked {
+  background-color: cyan;
+}
+.arabic .form-check-input[type=radio] {
+  background-color: #006666;
+}
+
+.latin {
+  direction: ltr;
+}
+
+.tip-bloc {
+  direction: ltr;
+}
+
+.arabic {
+  direction: rtl;
+}
+
+.tip-bloc {
+  direction: ltr;
+}
+
+.latin {
+  font-family: "Noto Sans";
+}
+.latin .en,
+.latin .tip-bloc {
+  font-family: "Noto Sans";
+}
+
+.arabic {
+  font-family: "Noto Sans Arabic";
+}
+.arabic .en,
+.arabic .tip-bloc {
+  font-family: "Noto Sans";
+}
+
+.latin {
+  font-size: 16px;
+}
+
+.tip-bloc {
+  font-size: 16px;
+}
+
+.arabic {
+  font-size: 18px;
+}
+
+.tip-bloc {
+  font-size: 16px;
+}
+
+.latin p {
+  line-height: 1.75;
+}
+.latin .tip-bloc p {
+  line-height: 1.75;
+}
+
+.arabic p {
+  line-height: 2;
+}
+.arabic .tip-bloc p {
+  line-height: 1.75;
+}
+
+.latin h1,
+.latin h2,
+.latin h3,
+.latin h4 {
+  line-height: calc(2px + 2ex + 2px);
+}
+
+.arabic h1,
+.arabic h2,
+.arabic h3,
+.arabic h4 {
+  line-height: calc(3px + 3ex + 3px);
+}
+
+.latin {
+  letter-spacing: 0.5px;
+}
+
+.arabic {
+  letter-spacing: 0px;
+}
+
+.form-check-input {
+  margin-right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: top;
+  background-position: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.25em;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  outline: 0;
+}
+
+.form-check-input[type=radio] {
+  border-radius: 50%;
+}
+
+.form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.tabbed-navigation {
+  margin: 2em 0;
+  display: flex;
+  justify-content: flex-start;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  border-radius: 0.2em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: auto;
+  line-height: 1;
+  overflow: hidden;
+}
+.tabbed-navigation a,
+.tabbed-navigation p {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  transition: 2s;
+}
+.tabbed-navigation a:focus,
+.tabbed-navigation p:focus {
+  outline: 0;
+  border: 0;
+}
+.tabbed-navigation p {
+  color: #525283;
+  margin-bottom: 0;
+}
+
+.blocs-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+}
+.blocs-container .tip-bloc {
+  border-radius: 0.2em;
+  padding: 1em;
+  width: 100%;
+}
+.blocs-container .tip-bloc p {
+  margin-bottom: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color: white;
+  background-color: #171725;
+  overflow-wrap: break-word;
+  -webkit-hyphens: none;
+          hyphens: none;
+  display: flex;
+  justify-content: center;
+}
+html main {
+  margin: 10vh 0;
+}
+html main .title {
+  max-width: 1000px;
+}
+html main .container {
+  padding: 0;
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  gap: 2em;
+}
+html main .container .content {
+  display: flex;
+  gap: 2em;
+}
+html main .container .content .main-text {
+  max-width: 70ch;
+}/*# sourceMappingURL=styles.css.map */

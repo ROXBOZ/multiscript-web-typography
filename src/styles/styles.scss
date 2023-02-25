@@ -1,0 +1,49 @@
+@import "vars";
+@import "mixins";
+@import "accessibility";
+@import "fonts";
+@import "typography";
+@import "header";
+@import "footer";
+@import "lang";
+@import "bootstrap";
+@import "nav";
+@import "tip-blocs";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color: $text-color;
+  background-color: $background-color;
+  overflow-wrap: break-word;
+  hyphens: none;
+  display: flex;
+  justify-content: center;
+
+  main {
+    margin: 10vh 0;
+    .title {
+      max-width: clamp(320px, 1000px, 2000px);
+    }
+    .container {
+      padding: 0;
+      display: flex;
+      margin: auto;
+      max-width: clamp(320px, 1000px, 2000px);
+      gap: $gap;
+
+      .content {
+        .main-text {
+          max-width: 70ch;
+        }
+        display: flex;
+        gap: $gap;
+      }
+    }
+  }
+}

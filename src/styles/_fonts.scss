@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/noto-sans-v27-latin-regular.eot");
+  src: local(""),
+    url("../assets/fonts/noto-sans-v27-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/noto-sans-v27-latin-regular.woff2") format("woff2"),
+    url("../assets/fonts/noto-sans-v27-latin-regular.woff") format("woff"),
+    url("../assets/fonts/noto-sans-v27-latin-regular.ttf") format("truetype"),
+    url("../assets/fonts/noto-sans-v27-latin-regular.svg#NotoSans")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/noto-sans-v27-latin-700.eot");
+  src: local(""),
+    url("../assets/fonts/noto-sans-v27-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/noto-sans-v27-latin-700.woff2") format("woff2"),
+    url("../assets/fonts/noto-sans-v27-latin-700.woff") format("woff"),
+    url("../assets/fonts/noto-sans-v27-latin-700.ttf") format("truetype"),
+    url("../assets/fonts/noto-sans-v27-latin-700.svg#NotoSans") format("svg");
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.eot");
+  src: local(""),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.woff")
+      format("woff"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.ttf")
+      format("truetype"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-regular.svg#NotoSansArabic")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/noto-sans-arabic-v18-arabic-700.eot");
+  src: local(""),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-700.woff2") format("woff2"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-700.woff") format("woff"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-700.ttf")
+      format("truetype"),
+    url("../assets/fonts/noto-sans-arabic-v18-arabic-700.svg#NotoSansArabic")
+      format("svg");
+}

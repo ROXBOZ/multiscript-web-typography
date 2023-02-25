@@ -1,0 +1,168 @@
+//colors
+$accent-colors: (
+  latin: magenta,
+  arabic: cyan,
+);
+
+@each $lang, $color in $accent-colors {
+  $transparent-color: rgba(map-get($accent-colors, $lang), 0.1);
+  .#{$lang} {
+    .pretitle,
+    a,
+    pre {
+      color: $color;
+    }
+    .skip-to-content-link {
+      background-color: $color;
+    }
+
+    .tip-bloc {
+      background-color: $transparent-color;
+    }
+
+    .tabbed-navigation {
+      background-color: $transparent-color;
+      a {
+        &:hover {
+          color: $txt-dark;
+          background-color: lighten($color, 25%);
+        }
+        &.active {
+          color: $txt-dark;
+          background-color: lighten($color, 20%);
+          &:hover {
+            background-color: lighten($color, 15%);
+          }
+        }
+      }
+    }
+
+    input {
+      accent-color: $color;
+    }
+
+    .button,
+    .button-look {
+      &:hover {
+        color: black !important;
+        background-color: $color;
+      }
+    }
+    .form-check-input {
+      border: solid 2px lighten($color, 20%);
+      &:checked {
+        background-color: $color;
+      }
+    }
+    .form-check-input[type="radio"] {
+      background-color: darken($color, 30%);
+    }
+  }
+}
+
+//direction
+$lang-direction: (
+  latin: ltr,
+  arabic: rtl,
+);
+@each $lang, $direction in $lang-direction {
+  .#{$lang} {
+    direction: $direction;
+  }
+
+  // tip blocs remain in latin
+  .tip-bloc {
+    direction: ltr;
+  }
+}
+
+//family
+$font-family: (
+  latin: "Noto Sans",
+  arabic: "Noto Sans Arabic",
+);
+@each $lang, $typeface in $font-family {
+  .#{$lang} {
+    font-family: $typeface;
+    .en,
+    .tip-bloc {
+      font-family: "Noto Sans";
+    }
+  }
+}
+
+$font-size: (
+  latin: 16px,
+  arabic: 18px,
+);
+@each $lang, $size in $font-size {
+  .#{$lang} {
+    font-size: $size;
+  }
+
+  .tip-bloc {
+    font-size: 16px;
+  }
+}
+
+$line-height: (
+  latin: 1.75,
+  arabic: 2,
+);
+
+@each $lang, $height in $line-height {
+  .#{$lang} {
+    p {
+      line-height: $height;
+    }
+
+    .tip-bloc {
+      p {
+        line-height: 1.75;
+      }
+    }
+  }
+}
+
+$header-line-height: (
+  latin: calc(2px + 2ex + 2px),
+  arabic: calc(3px + 3ex + 3px),
+);
+
+@each $lang, $header-height in $header-line-height {
+  .#{$lang} {
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: $header-height;
+    }
+  }
+}
+
+$letter-spacing: (
+  latin: 0.5px,
+  arabic: 0px,
+);
+@each $lang, $kerning in $letter-spacing {
+  .#{$lang} {
+    letter-spacing: $kerning;
+  }
+}
+
+// $max-width: (
+//   latin: 900ch,
+//   arabic: 50ch,
+// );
+// @each $lang, $width in $max-width {
+//   .#{$lang} {
+//     p {
+//       max-width: $width;
+//     }
+//   }
+// }
+
+$text-align: (
+  latin: left,
+  arabic: right,
+);

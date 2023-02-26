@@ -11,8 +11,9 @@ import Titles from "../components/home/Titles";
 
 const Home = () => {
   const { selectedScript } = useContext(LanguagesContext);
+
   return (
-    <main className={`${selectedScript}`}>
+    <main className={`${selectedScript} `}>
       <div className="container">
         <div>
           <Titles />

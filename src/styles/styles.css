@@ -141,6 +141,8 @@ header {
   margin: auto;
   padding: 2em 0;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
@@ -409,13 +411,17 @@ footer {
 }
 
 html {
-  color: white;
-  background-color: #171725;
   overflow-wrap: break-word;
   -webkit-hyphens: none;
           hyphens: none;
   display: flex;
   justify-content: center;
+  color: #171725;
+  background-color: white;
+}
+html.darkmode {
+  color: white;
+  background-color: #171725;
 }
 html main {
   margin: 10vh 0;

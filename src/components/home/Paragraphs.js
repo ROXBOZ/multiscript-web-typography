@@ -12,10 +12,13 @@ const Paragraphs = () => {
             visual, auditory or cognitive - permanent or temporary - to navigate
             the web easily. The WCAG 2.1 AA standards define a whole series of
             principles to be applied in order to ensure a perceptible, usable
-            and understandable web for everyone. Web accessibility is web
-            inclusion. Code, design and content have to meets some standards for
-            a website to be accessible. Web Accessibility increases the user
-            experience – everyone should benefit from it.
+            and understandable web for everyone.
+          </p>
+          <p>
+            Web accessibility is web inclusion. Code, design and content have to
+            meets some standards for a website to be accessible. Web
+            Accessibility increases the user experience – everyone should
+            benefit from it.
           </p>
           <p>
             Good practice in web typography and web accessibility means well

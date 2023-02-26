@@ -1,11 +1,19 @@
-import { LanguagesContext } from "../contexts/langContext";
 import { useContext } from "react";
+import { LanguagesContext } from "../contexts/langContext";
+import { ModesContext } from "../contexts/ModeContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const { selectedScript, setSelectedScript } = useContext(LanguagesContext);
+  const { setIsDarkMode } = useContext(ModesContext);
 
   const handleClick = (e) => {
     setSelectedScript(e.target.value);
+  };
+
+  const handleMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
@@ -44,6 +52,10 @@ const Header = () => {
           </label>
         </div>
       </ul>
+
+      <button onClick={handleMode}>
+        <FontAwesomeIcon icon={faSun} /> switch mode
+      </button>
     </header>
   );
 };

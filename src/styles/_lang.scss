@@ -7,6 +7,7 @@ $accent-colors: (
 @each $lang, $color in $accent-colors {
   $transparent-color: rgba(map-get($accent-colors, $lang), 0.1);
   .#{$lang} {
+    // background-color: darken($color, 45%);
     .pretitle,
     a,
     pre {

@@ -18,12 +18,18 @@
 }
 
 html {
-  color: $text-color;
-  background-color: $background-color;
   overflow-wrap: break-word;
   hyphens: none;
   display: flex;
   justify-content: center;
+
+  color: $txt-dark;
+  background-color: $bg-light;
+
+  &.darkmode {
+    color: $txt-light;
+    background-color: $bg-dark;
+  }
 
   main {
     margin: 10vh 0;

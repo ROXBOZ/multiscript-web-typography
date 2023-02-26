@@ -403,6 +403,13 @@ footer {
   margin-bottom: 0;
 }
 
+.modeToggler {
+  background-color: transparent;
+  border: none;
+  font-size: 150%;
+  color: #171725;
+}
+
 *,
 *:before,
 *:after {
@@ -416,30 +423,29 @@ html {
           hyphens: none;
   display: flex;
   justify-content: center;
+}
+html .App {
   color: #171725;
   background-color: white;
+  padding: 10vh 30vh;
 }
-html.darkmode {
+html .App.darkmode {
   color: white;
   background-color: #171725;
 }
-html main {
-  margin: 10vh 0;
+html .App.darkmode .modeToggler {
+  color: white;
 }
-html main .title {
-  max-width: 1000px;
-}
-html main .container {
+html .App main .container {
   padding: 0;
   display: flex;
   margin: auto;
-  max-width: 1000px;
   gap: 2em;
 }
-html main .container .content {
+html .App main .container .content {
   display: flex;
   gap: 2em;
 }
-html main .container .content .main-text {
+html .App main .container .content .main-text {
   max-width: 70ch;
 }/*# sourceMappingURL=styles.css.map */

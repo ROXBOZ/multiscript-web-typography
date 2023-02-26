@@ -1,21 +1,34 @@
 import "./styles/styles.css";
-import { useContext } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 
 import { LanguagesContextProvider } from "./contexts/langContext";
-import { ModesContext, ModesContextProvider } from "./contexts/ModeContext";
+import { ModesContextProvider } from "./contexts/ModeContext";
 
 function App() {
-  // const { isDarkMode } = useContext(ModesContext);
-  // ${isDarkMode ? "darkmode" : ""}
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
+    const appContainer = document.querySelector(".App");
+    if (isDarkMode) {
+      appContainer.classList.add("darkmode");
+    } else {
+      appContainer.classList.remove("darkmode");
+    }
+  }, [isDarkMode]);
+
   return (
     <Router>
       <ModesContextProvider>
         <LanguagesContextProvider>
-          <div className={`App`}>
-            <Header />
+          <div className="App">
+            <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
             <Routes>
               <Route index element={<Home />} />
             </Routes>

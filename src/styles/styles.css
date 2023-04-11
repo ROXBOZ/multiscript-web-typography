@@ -151,90 +151,114 @@ footer {
   margin: 0;
 }
 
-.latin .pretitle,
-.latin a,
-.latin pre {
-  color: magenta;
+.lightmode .latin .pretitle,
+.lightmode .latin a,
+.lightmode .latin pre {
+  color: rgb(81, 0, 93);
 }
-.latin .skip-to-content-link {
-  background-color: magenta;
+.lightmode .latin .skip-to-content-link {
+  background-color: rgb(81, 0, 93);
 }
-.latin .tip-bloc {
-  background-color: rgba(255, 0, 255, 0.1);
+.lightmode .latin .tip-bloc {
+  background-color: rgba(81, 0, 93, 0.1);
 }
-.latin .tabbed-navigation {
-  background-color: rgba(255, 0, 255, 0.1);
+.lightmode .latin .tabbed-navigation {
+  background-color: rgba(81, 0, 93, 0.1);
 }
-.latin .tabbed-navigation a:hover {
-  color: #171725;
-  background-color: #ff80ff;
+.lightmode .latin .tabbed-navigation a.active {
+  color: black;
+  background-color: #aa00c3;
 }
-.latin .tabbed-navigation a.active {
-  color: #171725;
-  background-color: #ff66ff;
+.lightmode .latin .tabbed-navigation a.active:hover {
+  background-color: #9400aa;
 }
-.latin .tabbed-navigation a.active:hover {
-  background-color: #ff4dff;
+.lightmode .latin input {
+  accent-color: rgb(81, 0, 93);
 }
-.latin input {
-  accent-color: magenta;
+.lightmode .latin .form-check-input:checked {
+  background-color: rgb(81, 0, 93);
 }
-.latin .button:hover,
-.latin .button-look:hover {
-  color: black !important;
-  background-color: magenta;
+.lightmode .arabic .pretitle,
+.lightmode .arabic a,
+.lightmode .arabic pre {
+  color: rgb(190, 63, 0);
 }
-.latin .form-check-input {
-  border: solid 2px #ff66ff;
+.lightmode .arabic .skip-to-content-link {
+  background-color: rgb(190, 63, 0);
 }
-.latin .form-check-input:checked {
-  background-color: magenta;
+.lightmode .arabic .tip-bloc {
+  background-color: rgba(190, 63, 0, 0.1);
 }
-.latin .form-check-input[type=radio] {
-  background-color: #660066;
+.lightmode .arabic .tabbed-navigation {
+  background-color: rgba(190, 63, 0, 0.1);
+}
+.lightmode .arabic .tabbed-navigation a.active {
+  color: black;
+  background-color: #ff6d25;
+}
+.lightmode .arabic .tabbed-navigation a.active:hover {
+  background-color: #ff5c0c;
+}
+.lightmode .arabic input {
+  accent-color: rgb(190, 63, 0);
+}
+.lightmode .arabic .form-check-input:checked {
+  background-color: rgb(190, 63, 0);
 }
 
-.arabic .pretitle,
-.arabic a,
-.arabic pre {
-  color: cyan;
+.darkmode .latin .pretitle,
+.darkmode .latin a,
+.darkmode .latin pre {
+  color: rgb(255, 255, 156);
 }
-.arabic .skip-to-content-link {
-  background-color: cyan;
+.darkmode .latin .skip-to-content-link {
+  background-color: rgb(255, 255, 156);
 }
-.arabic .tip-bloc {
-  background-color: rgba(0, 255, 255, 0.1);
+.darkmode .latin .tip-bloc {
+  background-color: rgba(255, 255, 156, 0.1);
 }
-.arabic .tabbed-navigation {
-  background-color: rgba(0, 255, 255, 0.1);
+.darkmode .latin .tabbed-navigation {
+  background-color: rgba(255, 255, 156, 0.1);
 }
-.arabic .tabbed-navigation a:hover {
-  color: #171725;
-  background-color: #80ffff;
+.darkmode .latin .tabbed-navigation a.active {
+  color: black;
+  background-color: white;
 }
-.arabic .tabbed-navigation a.active {
-  color: #171725;
-  background-color: #66ffff;
+.darkmode .latin .tabbed-navigation a.active:hover {
+  background-color: #ffffe9;
 }
-.arabic .tabbed-navigation a.active:hover {
-  background-color: #4dffff;
+.darkmode .latin input {
+  accent-color: rgb(255, 255, 156);
 }
-.arabic input {
-  accent-color: cyan;
+.darkmode .latin .form-check-input:checked {
+  background-color: rgb(255, 255, 156);
 }
-.arabic .button:hover,
-.arabic .button-look:hover {
-  color: black !important;
-  background-color: cyan;
+.darkmode .arabic .pretitle,
+.darkmode .arabic a,
+.darkmode .arabic pre {
+  color: rgba(108, 245, 255, 0.994);
 }
-.arabic .form-check-input {
-  border: solid 2px #66ffff;
+.darkmode .arabic .skip-to-content-link {
+  background-color: rgba(108, 245, 255, 0.994);
 }
-.arabic .form-check-input:checked {
-  background-color: cyan;
+.darkmode .arabic .tip-bloc {
+  background-color: rgba(108, 245, 255, 0.1);
 }
-.arabic .form-check-input[type=radio] {
-  background-color: #006666;
+.darkmode .arabic .tabbed-navigation {
+  background-color: rgba(108, 245, 255, 0.1);
+}
+.darkmode .arabic .tabbed-navigation a.active {
+  color: black;
+  background-color: rgba(210, 252, 255, 0.994);
+}
+.darkmode .arabic .tabbed-navigation a.active:hover {
+  background-color: rgba(185, 250, 255, 0.994);
+}
+.darkmode .arabic input {
+  accent-color: rgba(108, 245, 255, 0.994);
+}
+.darkmode .arabic .form-check-input:checked {
+  background-color: rgba(108, 245, 255, 0.994);
 }
 
 .latin {
@@ -269,6 +293,7 @@ footer {
   font-family: "Noto Sans";
 }
 
+/*------------Font-Size------------*/
 .latin {
   font-size: 16px;
 }
@@ -285,6 +310,7 @@ footer {
   font-size: 16px;
 }
 
+/*------------Line-Height------------*/
 .latin p {
   line-height: 1.75;
 }
@@ -313,12 +339,21 @@ footer {
   line-height: calc(3px + 3ex + 3px);
 }
 
+/*------------Letter-Spacing------------*/
 .latin {
   letter-spacing: 0.5px;
 }
 
 .arabic {
   letter-spacing: 0px;
+}
+
+.lightmode .form-check-input {
+  border: 2px solid #111114;
+}
+
+.darkmode .form-check-input {
+  border: 2px solid #fafafa;
 }
 
 .form-check-input {
@@ -382,7 +417,7 @@ footer {
   border: 0;
 }
 .tabbed-navigation p {
-  color: #525283;
+  color: #575767;
   margin-bottom: 0;
 }
 
@@ -407,7 +442,7 @@ footer {
   background-color: transparent;
   border: none;
   font-size: 150%;
-  color: #171725;
+  color: #111114;
 }
 
 *,
@@ -425,16 +460,16 @@ html {
   justify-content: center;
 }
 html .App {
-  color: #171725;
-  background-color: white;
+  color: #111114;
+  background-color: #fafafa;
   padding: 10vh 30vh;
 }
 html .App.darkmode {
-  color: white;
-  background-color: #171725;
+  color: #fafafa;
+  background-color: #111114;
 }
 html .App.darkmode .modeToggler {
-  color: white;
+  color: #fafafa;
 }
 html .App main .container {
   padding: 0;

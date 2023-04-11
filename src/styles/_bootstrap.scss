@@ -1,3 +1,15 @@
+.lightmode {
+  .form-check-input {
+    border: 2px solid $txt-dark;
+  }
+}
+
+.darkmode {
+  .form-check-input {
+    border: 2px solid $txt-light;
+  }
+}
+
 .form-check-input {
   margin-right: 0.5em;
   width: 1.5em;
@@ -6,6 +18,7 @@
   background-position: center;
   appearance: none;
   border-radius: 0.25em;
+
   &:active {
     filter: brightness(90%);
   }

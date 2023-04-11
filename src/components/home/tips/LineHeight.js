@@ -11,7 +11,7 @@ const LineHeight = () => {
           <p>
             <code>line-height</code> should be set at <strong>1.5</strong> for
             paragraphs. For languages with tall glyphs such as vietnamese, the{" "}
-            <code>line-height</code> should be of <strong>2</strong>.
+            <code>line-height</code> should be of <strong>2</strong>.
           </p>
         </div>
       )}

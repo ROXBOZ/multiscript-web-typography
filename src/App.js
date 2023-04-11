@@ -17,9 +17,11 @@ function App() {
   useEffect(() => {
     const appContainer = document.querySelector(".App");
     if (isDarkMode) {
+      appContainer.classList.remove("lightmode");
       appContainer.classList.add("darkmode");
     } else {
       appContainer.classList.remove("darkmode");
+      appContainer.classList.add("lightmode");
     }
   }, [isDarkMode]);
 

@@ -1,67 +1,66 @@
-//colors
-$accent-colors: (
-  latin: magenta,
-  arabic: cyan,
+$colors: (
+  light: (
+    latin: rgb(81, 0, 93),
+    arabic: rgb(190, 63, 0),
+  ),
+  dark: (
+    latin: rgb(255, 255, 156),
+    arabic: rgba(108, 245, 255, 0.994),
+  ),
 );
 
-@each $lang, $color in $accent-colors {
-  $transparent-color: rgba(map-get($accent-colors, $lang), 0.1);
-  .#{$lang} {
-    // background-color: darken($color, 45%);
-    .pretitle,
-    a,
-    pre {
-      color: $color;
-    }
-    .skip-to-content-link {
-      background-color: $color;
-    }
+@mixin language-styles($color) {
+  .pretitle,
+  a,
+  pre {
+    color: $color;
+  }
 
-    .tip-bloc {
-      background-color: $transparent-color;
-    }
+  .skip-to-content-link {
+    background-color: $color;
+  }
 
-    .tabbed-navigation {
-      background-color: $transparent-color;
-      a {
+  .tip-bloc {
+    background-color: rgba($color, 0.1);
+  }
+
+  .tabbed-navigation {
+    background-color: rgba($color, 0.1);
+    a {
+      &.active {
+        $light-color: map-get($colors, "light");
+        color: if($color == $light-color, blue, black);
+
+        background-color: lighten($color, 20%);
         &:hover {
-          color: $txt-dark;
-          background-color: lighten($color, 25%);
-        }
-        &.active {
-          color: $txt-dark;
-          background-color: lighten($color, 20%);
-          &:hover {
-            background-color: lighten($color, 15%);
-          }
+          background-color: lighten($color, 15%);
         }
       }
     }
+  }
 
-    input {
-      accent-color: $color;
-    }
+  input {
+    accent-color: $color;
+  }
 
-    .button,
-    .button-look {
-      &:hover {
-        color: black !important;
-        background-color: $color;
-      }
-    }
-    .form-check-input {
-      border: solid 2px lighten($color, 20%);
-      &:checked {
-        background-color: $color;
-      }
-    }
-    .form-check-input[type="radio"] {
-      background-color: darken($color, 30%);
+  .form-check-input {
+    &:checked {
+      background-color: $color;
     }
   }
 }
 
-//direction
+@each $mode, $mode-colors in $colors {
+  .#{$mode}mode {
+    @each $lang, $color in $mode-colors {
+      .#{$lang} {
+        @include language-styles($color);
+      }
+    }
+  }
+}
+
+///*------------Directions------------*/
 $lang-direction: (
   latin: ltr,
   arabic: rtl,
@@ -71,13 +70,12 @@ $lang-direction: (
     direction: $direction;
   }
 
-  // tip blocs remain in latin
   .tip-bloc {
     direction: ltr;
   }
 }
 
-//family
+///*------------Font-Family------------*/
 $font-family: (
   latin: "Noto Sans",
   arabic: "Noto Sans Arabic",
@@ -91,7 +89,7 @@ $font-family: (
     }
   }
 }
-
+/*------------Font-Size------------*/
 $font-size: (
   latin: 16px,
   arabic: 18px,
@@ -105,6 +103,7 @@ $font-size: (
     font-size: 16px;
   }
 }
+/*------------Line-Height------------*/
 
 $line-height: (
   latin: 1.75,
@@ -140,7 +139,7 @@ $header-line-height: (
     }
   }
 }
-
+/*------------Letter-Spacing------------*/
 $letter-spacing: (
   latin: 0.5px,
   arabic: 0px,
@@ -150,20 +149,3 @@ $letter-spacing: (
     letter-spacing: $kerning;
   }
 }
-
-// $max-width: (
-//   latin: 900ch,
-//   arabic: 50ch,
-// );
-// @each $lang, $width in $max-width {
-//   .#{$lang} {
-//     p {
-//       max-width: $width;
-//     }
-//   }
-// }
-
-$text-align: (
-  latin: left,
-  arabic: right,
-);
